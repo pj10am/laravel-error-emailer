@@ -12,7 +12,7 @@
 
                 <h2>PHP environment:</h2>
                 <pre style="max-width:600px;">
-$_SERVER = {{ print_r(array_except($_SERVER, array_keys($_ENV)), true) }}
+$_SERVER = {{ print_r(array_except($_SERVER, array_keys(include(base_path('.env.php')))), true) }}
 
 $_REQUEST = {{ print_r($_REQUEST, true) }}
                 </pre>
